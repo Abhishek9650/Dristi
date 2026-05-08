@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login - DRisti AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login_style.css') }}">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- LEFT SIDE (IMAGE / BRAND) -->
+        <div class="auth-left">
+
+        <div class="left-content">
+
+            <h1>DRisti AI</h1>
+
+            <p class="tagline">
+                Smart AI for Early Detection of Eye Diseases
+            </p>
+
+            <p class="desc">
+                Join our platform to analyze retina scans and predict
+                diabetic retinopathy using advanced AI models.
+            </p>
+
+            <div class="left-features">
+
+                <div class="feature">
+                    <p> > AI-Powered Diagnosis</p>
+                </div>
+
+                <div class="feature">
+                    <p> > Instant Results</p>
+                </div>
+
+                <div class="feature">
+                    <p> > Accurate Predictions</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="auth-right">
+
+        <div class="auth-box">
+
+            <h2>Welcome Back </h2>
+            <p class="auth-subtitle">Login to continue</p>
+
+            {% if error %}
+            <p class="error-msg">{{ error }}</p>
+            {% endif %}
+
+            <form method="POST">
+
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <input type="password" name="password" placeholder="Password" required>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <p class="auth-footer">
+                Don’t have an account?
+                <a href="/signup">Sign up</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

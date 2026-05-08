@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="history-container">
+
+    <h1>Prediction History</h1>
+
+    {% for item in records %}
+
+    <div class="history-card">
+
+        <h2>{{ item.prediction }}</h2>
+
+        <p>
+            Confidence:
+            {{ item.confidence }}%
+        </p>
+
+        <a href="/{{ item.report }}">
+            <button>
+                Download Report
+            </button>
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

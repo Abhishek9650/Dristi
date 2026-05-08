@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Medical Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='image/image.png') }}" class="logo-img">
+        DRisti AI
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/history">History</a>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+</div>
+
+<div class="result-container">
+
+    <div class="result-box">
+
+        <!-- ================= TITLE ================= -->
+        <h1 class="report-title" style="color: #0a3f8a;"> AI Retinopathy Analysis</h1>
+
+        <!-- ================= MAIN RESULT ================= -->
+        <div class="main-result">
+
+            <!-- RESULT BADGE -->
+            <div class="result-badge 
+                {% if prediction == 'No DR' %}badge-safe
+                {% elif prediction == 'Mild DR' %}badge-mild
+                {% elif prediction == 'Moderate DR' %}badge-moderate
+                {% else %}badge-severe
+                {% endif %}
+            ">
+                {{ prediction }}
+            </div>
+
+            <p class="confidence" style="color: black;">
+                AI Confidence: <span>Reliable Detection</span>
+            </p>
+
+            <!-- IMAGE -->
+            <div class="image-box">
+                <img src="{{ image }}" class="result-image">
+            </div>
+
+        </div>
+
+        <!-- ================= DIABETES SUPPORT ================= -->
+        <div class="secondary-result">
+
+            <h3 style="color: black;">Diabetes Risk (Supporting)</h3>
+
+            <p class="risk-level 
+                {% if diabetes_percent > 70 %}risk-high
+                {% elif diabetes_percent > 40 %}risk-mid
+                {% else %}risk-low
+                {% endif %}
+            ">
+                {% if diabetes_percent > 70 %}
+                    🔴 High Risk
+                {% elif diabetes_percent > 40 %}
+                    🟠 Moderate Risk
+                {% else %}
+                    🟢 Low Risk
+                {% endif %}
+            </p>
+
+        </div>
+
+        <!-- ================= AI INSIGHT ================= -->
+        <div class="result-section">
+
+            <h3 style=" color: #0a3f8a;">AI Insight</h3>
+
+            {% if diabetes_result == "Diabetic" and prediction != "No DR" %}
+
+                <p class="warning" style="color: black;">
+                    ⚠️ High risk: Diabetic Retinopathy detected along with diabetes.
+                    Immediate consultation with an eye specialist is recommended.
+                </p>
+
+            {% elif diabetes_result == "Diabetic" %}
+
+                <p class="warning">
+                    ⚠️ Diabetes detected but no visible DR.
+                    Regular eye screening is strongly advised.
+                </p>
+
+            {% else %}
+
+                <p class="safe">
+                    ✅ Low overall risk. Maintain a healthy lifestyle and regular checkups.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+        <!-- ================= ACTION BUTTONS ================= -->
+        <div class="result-actions">
+
+            <a href="/{{ report }}">
+                <button class="primary-btn">📄 Download Report</button>
+            </a>
+
+            <a href="/dashboard">
+                <button class="secondary-btn">⬅ Back to Dashboard</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

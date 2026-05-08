@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DRisti AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/index_style.css') }}">
+</head>
+
+<body>
+
+<!-- ========================= NAVBAR ========================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='image/image.png') }}" class="logo-img">
+        <span>DRisti AI</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup" class="btn signup-btn">Signup</a>
+    </div>
+
+</nav>
+
+<!-- ========================= HERO ========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h5>WELCOME TO DRISTI AI</h5>
+
+        <h1>
+            Best AI Healthcare<br>
+            <span>Solution For Retina Analysis</span>
+        </h1>
+
+        <p>
+            AI-powered hybrid system combining patient data and retina imaging
+            for early and accurate diabetic retinopathy detection.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/login" class="btn primary-btn">Analyze Now</a>
+            <a href="/signup" class="btn secondary-btn">Create Account</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+
+<section class="about-section">
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='image/dashboard2.jpg') }}">
+    </div>
+
+    <div class="about-content">
+
+        <h5>ABOUT DRISTI AI</h5>
+
+        <h2>Smart AI for Early Eye Disease Detection</h2>
+
+        <p>
+            DRisti AI is a hybrid healthcare system that combines clinical data
+            with retinal imaging to detect diabetic retinopathy at an early stage.
+        </p>
+
+        <div class="features">
+
+            <span class="feature-item">
+                 Accurate Detection
+            </span>
+
+            <span class="feature-item">
+                 AI-Powered Diagnosis
+            </span>
+
+            <span class="feature-item">
+                 Fast Results
+            </span>
+
+            <span class="feature-item">
+                 Easy to Use
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- GET IN TOUCH -->
+        <div class="footer-box">
+
+            <h3>GET IN TOUCH</h3>
+
+            <p>
+                DRisti AI helps in early detection of diabetic retinopathy 
+                using hybrid AI models.
+            </p>
+
+            <p>📍 Patiala, India</p>
+            <p>📧 dristi.ai@gmail.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+
+            <h3>QUICK LINKS</h3>
+
+            <ul>
+                <li><a href="/">› Home</a></li>
+                <li><a href="/login">› Login</a></li>
+                <li><a href="/signup">› Signup</a></li>
+                <li><a href="#">› About</a></li>
+                <li><a href="#">› Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- FEATURES -->
+        <div class="footer-box">
+
+            <h3>FEATURES</h3>
+
+            <ul>
+                <li>✔ Retina Scan Analysis</li>
+                <li>✔ Diabetes Prediction</li>
+                <li>✔ AI Reports</li>
+                <li>✔ Patient History</li>
+            </ul>
+
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-box">
+
+            <h3>NEWSLETTER</h3>
+
+            <div class="newsletter">
+                <input type="email" placeholder="Your Email">
+                <button>Sign Up</button>
+            </div>
+
+            <h4>FOLLOW US</h4>
+
+            <div class="social-icons">
+                <span>🌐</span>
+                <span>📘</span>
+                <span>💼</span>
+                <span>📸</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        © 2026 DRisti AI | All Rights Reserved
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+
+    <div class="logo">VisionGuard AI</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/history">History</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+</div>
+
+<div class="dashboard">
+
+    <h1>Welcome, {{ name }}</h1>
+
+    <div class="upload-box">
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="image" required>
+
+            <button type="submit">
+                Analyze Retina
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h2>AI Detection</h2>
+            <p>
+                Detect diabetic retinopathy instantly.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Medical Reports</h2>
+            <p>
+                Download AI generated PDF reports.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>History</h2>
+            <p>
+                View all previous patient scans.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

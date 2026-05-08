@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="result-container">
+
+    <div class="result-box">
+
+        <h1>{{ prediction }}</h1>
+
+        <h2>
+            Confidence: {{ confidence }}%
+        </h2>
+
+        <img src="{{ image }}">
+
+        <br><br>
+
+        <a href="/{{ report }}">
+            <button>
+                Download Report
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

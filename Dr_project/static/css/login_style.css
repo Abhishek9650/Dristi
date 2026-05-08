@@ -1,0 +1,165 @@
+/* =========================
+GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* =========================
+LAYOUT
+========================= */
+
+.auth-page{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT SIDE (IMAGE / BRAND) */
+
+.auth-left{
+    flex:1;
+
+    background:
+        linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)),
+        url("/static/image/dashboard1.jpg");
+
+    background-size:cover;
+    background-position:left center;
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:60px;
+}
+
+.auth-left h1{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.auth-left p{
+    color:#ddd;
+    max-width:400px;
+}
+
+/* RIGHT SIDE */
+
+.auth-right{
+    flex:1;
+    background:#e8e9ea;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =========================
+FORM BOX
+========================= */
+
+.auth-box{
+    width:450px;
+    background:white;
+
+    padding:40px;
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+    text-align:center;
+}
+
+/* TEXT */
+
+.auth-box h2{
+    margin-bottom:10px;
+}
+
+.auth-subtitle{
+    color:#666;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+
+.auth-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    font-size:14px;
+}
+
+/* BUTTON */
+
+.auth-box button{
+    width:100%;
+    padding:12px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#00c6ff;
+    color:white;
+
+    font-size:16px;
+    cursor:pointer;
+}
+
+.auth-box button:hover{
+    background:#0072ff;
+}
+
+/* ERROR */
+
+.error-msg{
+    color:red;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+.auth-footer{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.auth-footer a{
+    color:#00c6ff;
+    text-decoration:none;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+    .auth-page{
+        flex-direction:column;
+    }
+
+    .auth-left{
+        height:40vh;
+        text-align:center;
+        align-items:center;
+    }
+
+    .auth-right{
+        height:60vh;
+    }
+}
