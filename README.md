@@ -248,7 +248,7 @@ This project is developed for educational and research purposes only and should 
 
 # 👨‍💻 Author
 
-**Abhishek Kapoor**
+**Abhishek Kapoor and Pema Tsomo**  
 
 AI & Machine Learning Developer
 
